@@ -19,8 +19,7 @@ class Alertmanager < Formula
   service do
     run [alertmanager
       opt_bin/"alertmanager",
-      "--config.file=#{etc}/alertmanager.yml",
-      "--storage.path=#{var}/data/alertmanager"
+      "--config.file=#{etc}/alertmanager.yml","--storage.path=#{var}/data/alertmanager"
     ]
 
     keep_alive true
